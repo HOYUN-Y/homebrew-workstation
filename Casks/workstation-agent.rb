@@ -8,7 +8,7 @@ cask "workstation-agent" do
   homepage "https://github.com/HOYUN-Y/homebrew-workstation"
 
   depends_on formula: "uv"
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
   depends_on arch: :arm64
 
   app "Workstation Agent.app"
