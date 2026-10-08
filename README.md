@@ -8,7 +8,7 @@ Apple Silicon(M 시리즈), macOS 15 이상, Homebrew가 필요합니다. Claude
 
 ```sh
 brew tap HOYUN-Y/workstation
-brew install --cask workstation-agent
+brew install --cask hoyun-y/workstation/workstation-agent
 open -a "Workstation Agent"
 ```
 
