@@ -1,6 +1,6 @@
 cask "workstation-agent" do
-  version "0.2.0"
-  sha256 "7c7e9254bbc9633840b033afbb930d7a402d5ec664fa71f86d632c23038dc88b"
+  version "0.10.4"
+  sha256 "eba16e2f26b7223db17afe8309df4048acb199da3b75f2cd2126f499ef79c067"
 
   url "https://github.com/HOYUN-Y/homebrew-workstation/releases/download/v#{version}/Workstation-Agent-#{version}-arm64.zip"
   name "Workstation Agent"
@@ -20,7 +20,8 @@ cask "workstation-agent" do
     This app is ad-hoc signed and not notarized by Apple.
     On first launch, macOS may require manual approval in Privacy & Security.
     Open the app to prepare Python, connect your account, and register project folders.
-    Claude Code must be installed and signed in separately.
+    Install and sign in to Claude Code or Codex CLI separately for the engine you use.
+    Codex requires version 0.162.0 or newer and app-server permissions support.
     Before upgrading or uninstalling, pause new requests and finish/cancel active runs.
     Device identity, folders, logs, and Keychain login are preserved on uninstall.
   EOS
