@@ -1,10 +1,10 @@
 # Workstation Agent for Mac
 
-Workstation 대시보드의 로컬 Claude 스킬 실행을 관리하는 메뉴바 앱입니다. 연결 상태, 스킬 준비·실행, 작업별 승인과 실행 기록을 확인할 수 있습니다.
+Workstation의 네이티브 Mac 대시보드입니다. 업무 조회·편집, Claude Code/Codex 대화·스킬 실행, 지식 그래프 조회와 수동 원천 변경 분석을 지원합니다. 0.10.4는 코어 앱 아이콘과 브레인 렌더링 개선을 포함합니다.
 
 ## 설치
 
-Apple Silicon(M 시리즈), macOS 15 이상, Homebrew가 필요합니다. Claude Code는 별도로 설치하고 로그인해주세요.
+Apple Silicon(M 시리즈), macOS 15 이상, Homebrew가 필요합니다. 사용할 Claude Code 또는 Codex CLI를 별도로 설치하고 로그인해주세요. Codex는 0.162.0 이상이 필요합니다.
 
 ```sh
 brew tap HOYUN-Y/workstation
@@ -18,9 +18,9 @@ Apple 유료 인증서와 공증 없이 ad-hoc 서명했습니다. 최초 실행
 
 ## 처음 연결하기
 
-1. 메뉴바의 컴퓨터 아이콘을 열고 대시보드 서버 주소를 확인합니다.
+1. 앱을 열고 대시보드 서버 주소를 확인합니다.
 2. ‘브라우저에서 로그인’으로 대시보드에 로그인하고 앱 연결에 동의합니다.
-3. ‘실행기 준비’를 누릅니다. Claude 로그인 상태를 확인합니다.
+3. ‘실행기 준비’를 누릅니다. 사용할 엔진의 로그인 상태를 확인합니다.
 4. ‘이 Mac을 대시보드에 연결’을 누릅니다.
 5. 프로젝트를 선택하고 신뢰하는 개별 폴더를 등록합니다. 홈 폴더 전체와 실행기 내부 상태 폴더(`~/.local/share/workstation-agent`)는 등록하지 않습니다.
 6. ‘자동 시작 설치·시작’을 누릅니다. 이는 실행 서비스를 자동 시작하며 메뉴바 앱의 로그인 시 실행 설정과는 별개입니다.
@@ -39,7 +39,7 @@ Apple 유료 인증서와 공증 없이 ad-hoc 서명했습니다. 최초 실행
 
 ```sh
 brew update
-brew upgrade --cask workstation-agent
+brew upgrade --cask hoyun-y/workstation/workstation-agent
 ```
 
 4. 앱을 열고 ‘실행기 설치본 업데이트’를 누릅니다.
@@ -61,3 +61,7 @@ brew uninstall --cask workstation-agent
 ## 검증 범위
 
 첫 공개 릴리스의 확인 결과는 해당 Release 노트에 기록합니다. 다른 Mac과 macOS 15 실기 검증, 과거 공개 버전에서의 업그레이드는 별도입니다. 공식 homebrew-cask 등록이 아닌 이 저장소의 자체 tap으로 배포합니다.
+
+## 0.10.4 참고
+
+지식 조회·편집·수동 변경 분석은 앱에서 해당 권한을 별도로 연결합니다. 원천 폴더는 Mac마다 연결하며 자동 감시는 포함하지 않습니다. Swift·패키지·서명·ZIP 해시를 검증했습니다. 다른 Mac의 0.2.0 업그레이드와 장시간 성능 측정은 미검증입니다.
