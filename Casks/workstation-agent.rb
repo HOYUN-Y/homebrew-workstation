@@ -1,6 +1,6 @@
 cask "workstation-agent" do
-  version "0.10.4"
-  sha256 "eba16e2f26b7223db17afe8309df4048acb199da3b75f2cd2126f499ef79c067"
+  version "0.10.5"
+  sha256 "1e7616a10bb887223d02384d59226e6fe3f29a3d9919ac4ae4422d22e0ad62b1"
 
   url "https://github.com/HOYUN-Y/homebrew-workstation/releases/download/v#{version}/Workstation-Agent-#{version}-arm64.zip"
   name "Workstation Agent"
